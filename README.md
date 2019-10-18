@@ -32,6 +32,9 @@ SplitOpen is GPL-3.0 licensed. See LICENSE file for more info.
 
 ## Changelog 
 
+v0.0.3
+* Add fzf.vim keybinding
+
 v0.0.2
 * Added delay-loading
 * Added documentation
