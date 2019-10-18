@@ -1,0 +1,30 @@
+*splitopen.txt* opens file-pairs in a new split-window tab
+
+================================================================================
+CONTENTS                                                     *SplitOpenContents*
+
+	1. Usage ..................................|SplitOpenUsage|
+	2. License ................................|SplitOpenLicense|
+	3. Changelog ..............................|SplitOpenChangelog|
+
+================================================================================
+1. Usage                                                        *SplitOpenUsage*
+
+Use 
+
+	:SplitOpen filename 
+
+with a .cpp or .h file as filename to open a new tab containing a vertical split
+with the corresponding header file in the left window and the corresponding
+source file in the right window.
+
+================================================================================
+2. License                                                    *SplitOpenLicense*
+
+SplitOpen is GPL-3.0 licensed. See LICENSE file for more info.
+
+================================================================================
+3. Changelog                                                *SplitOpenChangelog*
+
+v0.0.1
+	* Initial release
