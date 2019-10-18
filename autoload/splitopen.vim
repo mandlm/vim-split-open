@@ -1,4 +1,4 @@
-function! SplitOpenFile(filename)
+function splitopen#SplitOpenFile(filename)
 	execute("tabedit " . a:filename)
 	let l:file_extension = tolower(fnamemodify(a:filename, ":e"))
 	if l:file_extension == "cpp"
@@ -9,5 +9,3 @@ function! SplitOpenFile(filename)
 		execute("wincmd h")
 	endif
 endfunction
-
-command! -nargs=1 SplitOpen :call SplitOpenFile("<args>")
