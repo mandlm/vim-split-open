@@ -5,7 +5,8 @@ CONTENTS                                                     *SplitOpenContents*
 
 	1. Usage ..............................|SplitOpenUsage|
 	2. Configuration ......................|SlitOpenConfiguraton|
-		2.1 g:splitopen_set_fzf_keys.......|SplitOpenConfiguration_set_fzf_keys|
+		2.1 g:splitopen_extensions.........|SplitOpenConfiguration_extensions|
+		2.2 g:splitopen_set_fzf_keys.......|SplitOpenConfiguration_set_fzf_keys|
 	3. License ............................|SplitOpenLicense|
 	4. Changelog ..........................|SplitOpenChangelog|
 
@@ -27,7 +28,19 @@ You can configure the following settings:
 
 --------------------------------------------------------------------------------
 
-2.1 g:splitopen_set_fzf_keys               *SplitOpenConfiguration_set_fzf_keys*
+2.1 g:splitopen_extensions                   *SplitOpenConfiguration_extensions*
+
+Use this dictionary to define your pairs of left-hand- right-hand-side file
+types. E.g.
+
+	let g:splitopen_extensions = {"h": "cpp"}
+
+always places a .cpp file on the right-hand side when opening an .h file and
+vice versa.
+
+--------------------------------------------------------------------------------
+
+2.2 g:splitopen_set_fzf_keys               *SplitOpenConfiguration_set_fzf_keys*
 
 Set this option to 1 
 
