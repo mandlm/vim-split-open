@@ -16,6 +16,15 @@ source file in the right window.
 
 You can configure the following settings:
 
+### g:splitopen_extensions
+
+Use this dictionary to define your pairs of left-hand- right-hand-side file
+types. E.g.
+
+	let g:splitopen_extensions = {"h": "cpp"}
+
+always places a .cpp file on the right-hand side when opening an .h file and
+vice versa.
 
 ### g:splitopen_set_fzf_keys
 
@@ -31,6 +40,9 @@ files in splits or tabs to add an addional binding ctrl-s to call SplitOpen.
 SplitOpen is GPL-3.0 licensed. See LICENSE file for more info.
 
 ## Changelog 
+
+v0.0.4
+* Add filetype configuraton
 
 v0.0.3
 * Add fzf.vim keybinding
