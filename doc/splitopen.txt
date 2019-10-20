@@ -27,7 +27,6 @@ source file in the right window.
 You can configure the following settings:
 
 --------------------------------------------------------------------------------
-
 2.1 g:splitopen_extensions                   *SplitOpenConfiguration_extensions*
 
 Use this dictionary to define your pairs of left-hand- right-hand-side file
@@ -39,7 +38,6 @@ always places a .cpp file on the right-hand side when opening an .h file and
 vice versa.
 
 --------------------------------------------------------------------------------
-
 2.2 g:splitopen_set_fzf_keys               *SplitOpenConfiguration_set_fzf_keys*
 
 Set this option to 1 
