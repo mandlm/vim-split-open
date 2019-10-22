@@ -4,18 +4,18 @@ function s:invert_dict(source_dict)
 		let result[value] = key
 	endfor
 	return result
-endfunc
+endfunction
 
 let s:extensions = g:splitopen_extensions
 let s:extensions_rev = s:invert_dict(s:extensions)
 
 function s:isLeftSideExtension(extension)
 	return has_key(s:extensions, a:extension)
-endfunc
+endfunction
 
 function s:isRightSideExtension(extension)
 	return has_key(s:extensions_rev, a:extension)
-endfunc
+endfunction
 
 function s:getFileExtension(filename)
 	return fnamemodify(a:filename, ":e")
@@ -23,7 +23,7 @@ endfunction
 
 function s:getFileRoot(filename)
 	return fnamemodify(a:filename, ":r")
-endfunc
+endfunction
 
 function s:getSwitchExtension(filename)
 	let extension = s:getFileExtension(a:filename)
@@ -32,24 +32,24 @@ function s:getSwitchExtension(filename)
 	elseif s:isRightSideExtension(extension)
 		return s:extensions_rev[extension]
 	endif
-endfunc
+endfunction
 
 function s:getSwitchFile(filename)
 	return s:getFileRoot(a:filename) . "." . s:getSwitchExtension(a:filename)
-endfunc
+endfunction
 
 function s:addLeftSplit(filename)
 	execute("vsplit " . s:getSwitchFile(a:filename))
 	execute("wincmd l")
-endfunc
+endfunction
 
 function s:addRightSplit(filename)
 	execute("vsplit " . s:getSwitchFile(a:filename))
 	execute("wincmd L")
 	execute("wincmd h")
-endfunc
+endfunction
 
-function splitopen#SplitOpenFile(filename)
+function! splitopen#SplitOpenFile(filename)
 	execute("tabedit " . a:filename)
 	let extension = s:getFileExtension(a:filename)
 	if s:isLeftSideExtension(extension)
