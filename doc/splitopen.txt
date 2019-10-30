@@ -55,6 +55,8 @@ SplitOpen is GPL-3.0 licensed. See LICENSE file for more info.
 ================================================================================
 4. Changelog                                                *SplitOpenChangelog*
 
+v1.0.0
+	* Fixed error when reloading plugin
 v0.0.4
 	* Add filetype configuraton
 v0.0.3
