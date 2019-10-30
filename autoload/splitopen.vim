@@ -49,12 +49,20 @@ function s:addRightSplit(filename)
 	execute("wincmd h")
 endfunction
 
-function! splitopen#SplitOpenFile(filename)
-	execute("tabedit " . a:filename)
+function s:splitOpenFile(filename)
 	let extension = s:getFileExtension(a:filename)
 	if s:isLeftSideExtension(extension)
 		call s:addRightSplit(a:filename)
 	elseif s:isRightSideExtension(extension)
 		call s:addLeftSplit(a:filename)
 	endif
+endfunction
+
+function! splitopen#SplitOpenFile(filename)
+	execute("tabedit " . a:filename)
+	call s:splitOpenFile(a:filename)
+endfunction
+
+function! splitopen#SplitFile()
+	call s:splitOpenFile(expand("%:p"))
 endfunction
