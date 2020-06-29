@@ -1,4 +1,4 @@
-command! -nargs=1 SplitOpen :call splitopen#SplitOpenFile("<args>")
+command! -complete=file -nargs=1 SplitOpen :call splitopen#SplitOpenFile("<args>")
 command! Split :call splitopen#SplitFile()
 
 " map left-split / right-split file extensions
