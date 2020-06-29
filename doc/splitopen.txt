@@ -25,7 +25,7 @@ Use
 
 	:Split
 
-to open the corresponding heder or source file to your currently open file in
+to open the corresponding header or source file to your currently open file in
 a vertical split.
 
 ================================================================================
