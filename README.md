@@ -12,6 +12,13 @@ with a .cpp or .h file as filename to open a new tab containing a vertical split
 with the corresponding header file in the left window and the corresponding
 source file in the right window.
 
+Use
+
+	:Split
+
+to open the corresponding heder or source file to your currently open file in
+a vertical split.
+
 ## Configuration
 
 You can configure the following settings:
@@ -40,6 +47,9 @@ files in splits or tabs to add an addional binding ctrl-s to call SplitOpen.
 SplitOpen is GPL-3.0 licensed. See LICENSE file for more info.
 
 ## Changelog 
+
+v1.1.0
+* Added Split() command
 
 v1.0.0
 * Fixed error when reloading plugin

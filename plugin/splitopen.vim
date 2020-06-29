@@ -1,4 +1,5 @@
 command! -nargs=1 SplitOpen :call splitopen#SplitOpenFile("<args>")
+command! Split :call splitopen#SplitFile()
 
 " map left-split / right-split file extensions
 if !exists("g:splitopen_extensions")
